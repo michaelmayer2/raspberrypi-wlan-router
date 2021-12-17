@@ -1,0 +1,7 @@
+iptables-restore < /etc/iptables.ipv4.nat
+
+sleep 10
+/etc/init.d/isc-dhcp-server restart 
+
+route del default
+exit 0
